@@ -14,8 +14,28 @@ body
     grid-template-rows: 50px 1fr 80px;
     height: 100vh;
     font-family: var(--tekst-family);
-
+    color: rgba(0, 0, 0, 0.0);
+    /* commit merge conflict test nog een keer */
 }
+
+/**
+sdkjfbdkfjbds
+stsdtsdfg
+asdgfadsfg
+sgsdfgsd
+sdgsdfgsdfg
+fgsdfgsdgfs
+gsdfgsdgfs
+fgsdfgdsgsd
+fgdsfgdsfgf
+gdsfgsdfgsd
+gsdgfsdgs
+dgsdfgsdfgsdfg
+sdfgsdfgsdfg
+sdgfsdfgs
+gs
+sdfgsdfgsdgfs
+*/
 
 header {
     grid-area: head;
@@ -24,7 +44,7 @@ header {
     max-width: 100vw;
     /* add box shadow outside bottom border */
     content: "";
-    position: fixed;
+    position: fixed; /* New comment */
     top: 0px;
     left: 0;
     width: 100%;
@@ -51,7 +71,7 @@ main {
     padding: 10px 5px 0 5px;
 }
 
-
+/* New comment */
 
 /* Code gekopieerd van vorig project */
 footer {
@@ -103,6 +123,8 @@ nav ul li a {
 .menu-text {
     font-size: 0.75em;   
 }
+
+/* Comment */
 
 nav ul li a i {
     margin-bottom: 10px;
