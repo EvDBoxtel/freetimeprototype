@@ -8,10 +8,7 @@
 /* HUISSTIJL */
 body
 {
-    background-color: #fffffff1;
     display: grid;
-    grid-template-areas:"head" "content" "menu";
-    grid-template-rows: 120px 1fr 80px;
     height: 100vh;
     font-family: var(--tekst-family);
 
@@ -33,7 +30,7 @@ header {
     /* END add box shadow outside bottom border */
 }
 
-header>img {
+header img {
     max-width: 20em;
 }
 
@@ -129,6 +126,7 @@ nav ul li a.actief {
 /* COURSES STYLING */
 
 /* PROFILE STYLING */
+
 .landscape_profile {
     height: 15vh;
     width: 100vw;
@@ -225,4 +223,10 @@ nav ul li a.actief {
 
 .hobby3 {
     height: 10vh;
+}
+
+#fullpage {
+    grid-template-areas:"head" "content" "menu";
+    grid-template-rows: 120px 1fr 80px;
+    background-color: #fffffff1;
 }
