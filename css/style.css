@@ -8,7 +8,7 @@
 /* HUISSTIJL */
 body
 {
-    background-color: #fff;
+    background-color: #fffffff1;
     display: grid;
     grid-template-areas:"head" "content" "menu";
     grid-template-rows: 120px 1fr 80px;
@@ -154,21 +154,75 @@ nav ul li a.actief {
     margin-right: auto;
 }
 
-main h1{
+.name_profile h1{
     margin-top: 6vh;
     text-align: center;
 }
 
-main p {
+.name_profile p {
     text-align: center;
 }
 
 #main_profile {
-    width: 95vw;
+    width: 85vw;
     height: 40vh;
-    background-color: rgb(219, 219, 219);
+    background-color: rgba(255, 255, 255, 0.938);
     border-radius: 5%;
     margin: 0px;
     margin-left: 1vw;
-    margin-top: 10vh;
+    margin-top: 5vh;
+    padding: 20px;
+
+    /* Drop shadow */
+    -webkit-box-shadow: -1px 3px 25px 12px rgba(0,0,0,0.1);
+    -moz-box-shadow: -1px 3px 25px 12px rgba(0,0,0,0.1);
+    box-shadow: -1px 3px 25px 12px rgba(0,0,0,0.1);
+}
+
+#main_profile h1{
+    font-size: 20px;
+}
+.tekst_profile h1{
+    text-align: left;
+    margin-left: 5vw;;
+}
+
+.tekst_profile p {
+    text-align: left;
+    margin-left: 5vw;;
+    margin-bottom: 3vh;
+}
+
+
+.hobby_profile img {
+    margin-top: 1vh;
+    width: 10%;
+    position: absolute;
+}
+
+.hobby_profile{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.hobby_profile h1{
+    margin-left: 30vw;;
+}
+
+.hobby_profile p{
+    margin-left: 30vw;;
+}
+
+.hobby1 {
+    margin-bottom: 10px;
+    height: 10vh;
+}
+
+.hobby2 {
+    margin-bottom: 10px;
+    height: 10vh;
+}
+
+.hobby3 {
+    height: 10vh;
 }
