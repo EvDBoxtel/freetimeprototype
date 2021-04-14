@@ -124,6 +124,118 @@ nav ul li a.actief {
 
 
 /* GEAR STYLING */
+/* checkbox1 */
+.checkbox-main{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    text-align: baseline;
+    margin-top: 20px;
+}
+
+.checkbox-main input[type=checkbox]{
+    display: none;
+}
+
+.check-box-item{
+    width: 1em;
+    height: 1em;
+    background-color: transparent;
+    border: 4px solid #808080;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Kleine lijn */
+.check-box-item::before{
+    position: absolute;
+    content: '';
+    width: 5px;
+    background-color: #EFB75B;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-radius: 5px;
+    top: 14px;
+    left: 11px;
+    box-shadow: 0 0 0 px #3266dc;
+    -webkit-transform:rotate(-230deg);
+    transform:rotate(-230deg)
+}
+
+/* Grote lijn */
+.check-box-item::after{
+    position: absolute;
+    content: '';
+    width: 25px;
+    background-color: #EFB75B;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-radius: 5px;
+    top: 12px;
+    left: 7px;
+    -webkit-transform:rotate(-50deg);
+    transform:rotate(-50deg);
+}
+
+.checkbox-main input[type=checkbox]:checked + .check-box-item, .check-box-item.checked{
+    border-color: #EFB75B;
+}
+
+.checkbox-main input[type=checkbox]:checked + .check-box-item::after, .check-box-item.checked::after{
+    height: 5px;
+    -webkit-animation: checkboxleft 0.2s ease 0s forwards;
+    animation: checkboxleft 0.2s ease 0s forwards;
+}
+
+.checkbox-main input[type=checkbox]:checked + .check-box-item::before, .check-box-item.checked::before{
+    height: 13px;
+    -webkit-animation: checkboxright 0.4s ease 0s forwards;
+    animation: checkboxright 0.4s ease 0s forwards;
+}
+
+@-webkit-keyfreames checkboxleft{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100px;
+    }
+}
+
+@keyfreames checkboxleft{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100px;
+    }
+}
+
+@-webkit-keyfreames checkboxright{
+    0%{
+        height: 0;
+    }
+    50%{
+        height: 0;
+    }
+    100%{
+        height: 240px;
+    }
+}
+
+@keyfreames checkboxright{
+    0%{
+        height: 0;
+    }
+    50%{
+        height: 0;
+    }
+    100%{
+        height: 240px;
+    }
+}
 
 
 /* COURSES STYLING */
