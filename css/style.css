@@ -454,6 +454,7 @@ nav ul li a.actief {
     height: 15vh;
     width: 100vw;
     background-color: #EFB75B;
+    max-height: 140px;
 }
 
 .landscape_profile h1{
