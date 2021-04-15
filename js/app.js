@@ -11,13 +11,15 @@ tags.forEach((tag) => {
 })
 
 function checkFocus() {
-    if (search_bar == document.activeElement) {
-        search_icon.style.transition = 0.1;
-        search_icon.style.opacity = 0;
-        search_icon.style.display= 'none';
-    } else {
-        search_icon.style.display = 'inline';
-        search_icon.style.transition = 0.1;
-        search_icon.style.opacity = 1;
+    if(search_bar != null) {
+        if (search_bar == document.activeElement) {
+            search_icon.style.transition = 0.1;
+            search_icon.style.opacity = 0;
+            search_icon.style.display= 'none';
+        } else {
+            search_icon.style.display = 'inline';
+            search_icon.style.transition = 0.1;
+            search_icon.style.opacity = 1;
+        }
     }
 }
