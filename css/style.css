@@ -50,6 +50,11 @@ ul {
 
 a {
     text-decoration: none;
+    color: #000;
+}
+
+a:visited {
+    color: #000;
 }
 
 main {
@@ -205,6 +210,7 @@ section h3{
     font-weight: bold;
     border-radius: 25px;
 }
+
 
 /* GEAR STYLING */
 /* checkbox1 */
@@ -394,8 +400,12 @@ section h3{
     color: #ffffff;
     font-size: 2em;
     position: relative;
-    left: 16px;
-    top: 7px;
+    /* left: 12px;
+    top: 8px; */
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    top: 8px;
 }
 
 .column {
