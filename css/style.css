@@ -470,6 +470,14 @@ nav ul li a.actief {
 
 /* PROFILE STYLING */
 
+/* Speciale body voor de profile page */
+#fullpage {
+    grid-template-areas:"head" "content" "menu";
+    grid-template-rows: 120px 1fr 80px;
+    background-color: #fffffff1;
+}
+
+/* Style voor het bovenstuk van de pagina */
 .landscape_profile {
     height: 15vh;
     width: 100vw;
@@ -506,16 +514,14 @@ nav ul li a.actief {
     text-align: center;
 }
 
+/* De kaart in het midden van de pagina */
 #main_profile {
-    /* width: 100vw; */
     height: 40vh;
     background-color: rgba(255, 255, 255, 0.938);
     border-radius: 25px;
     margin: 0px 30px;
-    /* margin-left: 1vw; */
     margin-top: 5vh;
     padding: 20px;
-    /* display: block; */
 
     /* Drop shadow */
     -webkit-box-shadow: -1px 3px 25px 12px rgba(0,0,0,0.1);
@@ -526,6 +532,8 @@ nav ul li a.actief {
 #main_profile h1{
     font-size: 20px;
 }
+
+/* Inhoud in de kaart */
 .tekst_profile h1{
     text-align: left;
     margin-left: 5vw;;
@@ -540,7 +548,6 @@ nav ul li a.actief {
 
 .hobby_profile img {
     margin-top: 1vh;
-    /* width: 10%; */
     width: 2.2em;
     position: absolute;
 }
@@ -558,6 +565,7 @@ nav ul li a.actief {
     margin-left: 30vw;;
 }
 
+/* De 3 sections van de hobby's in de kaart */
 .hobby1 {
     margin-bottom: 10px;
     height: 10vh;
@@ -570,10 +578,4 @@ nav ul li a.actief {
 
 .hobby3 {
     height: 10vh;
-}
-
-#fullpage {
-    grid-template-areas:"head" "content" "menu";
-    grid-template-rows: 120px 1fr 80px;
-    background-color: #fffffff1;
 }
