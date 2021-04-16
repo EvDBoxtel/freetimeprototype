@@ -50,11 +50,17 @@ ul {
 
 a {
     text-decoration: none;
+    color: #000;
+}
+
+a:visited {
+    color: #000;
 }
 
 main {
     grid-area: content;
     padding: 10px 5px 0 5px;
+    overflow: scroll;
 }
 
 
@@ -123,6 +129,87 @@ nav ul li a.actief {
 /* END bottom navigation bar*/ 
 
 /* COMMUNITY STYLING */
+#communitybody {
+    background-color: var(--overlaykleur);
+    display: flex;
+    height: 400vh;
+    flex-direction: column;
+    line-height: 1.5;
+    color: var(--tekstkleur);
+    align-items: center;
+    }
+
+.scrolls {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+    right: 1.25em;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    color: red;
+}
+
+.scrolls .center {
+    font-size: 0.825rem;
+}
+
+.smooth{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory; 
+}
+
+.community-info {
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    font-size: large;
+}
+
+section{
+    height: 100vh;
+}
+
+section h3{
+    margin-top: 65px;
+}
+
+.community-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 25px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.communitybutton {
+    background-color: #EFB75B;
+    border: 1px solid transparent;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    font-weight: bold;
+    border-radius: 25px;
+}
 
 
 /* GEAR STYLING */
@@ -313,8 +400,12 @@ nav ul li a.actief {
     color: #ffffff;
     font-size: 2em;
     position: relative;
-    left: 16px;
-    top: 7px;
+    /* left: 12px;
+    top: 8px; */
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    top: 8px;
 }
 
 .column {
@@ -331,6 +422,21 @@ nav ul li a.actief {
 .label>.checked {
     color: #EFB75B;
 }
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 0 5px;
+}
+
+
+.labelA>i {
+    color: rgba(0, 0, 0, 0.2)
+}
+
+.labelA>.checked {
+    color: #000000;
+}
 
 .beginner-course {
     margin-bottom: 10px;
@@ -338,6 +444,7 @@ nav ul li a.actief {
 
 /* HOME STYLING */
 
+/*
 .course { 
     --coursewidth: 100%;
     background: #fff;
@@ -466,7 +573,7 @@ nav ul li a.actief {
     }
 }
 
-
+*/
 
 /* PROFILE STYLING */
 
