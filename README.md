@@ -11,14 +11,14 @@ Clone deze repository of download het als .zip om het op je eigen computer te op
 6. Start met je eigen dingen.
 
 ## Check het huidige project op:
-[FreeTime](https://i333925.hera.fhict.nl/freetimeprototype/){:target="_blank"}
+[FreeTime](https://i333925.hera.fhict.nl/freetimeprototype/)
 
 ## Om de app te gebruiken volg het volgende stappenplan
 #### Android:
 1. Klik op de bovenstaande link.
 2. Druk op de 3 puntjes rechtsbovenin je browser.
 3. Druk op 'Toevoegen aan startscherm'.
-4. Druk op 'Toevoeven'.
+4. Druk op 'Toevoegen'.
 
 #### iOS:
 ##### iPhone
