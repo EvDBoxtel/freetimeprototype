@@ -129,6 +129,7 @@ nav ul li a.actief {
 /* END bottom navigation bar*/ 
 
 /* COMMUNITY STYLING */
+/* main-deel van de pagina */
 #communitybody {
     background-color: var(--overlaykleur);
     display: flex;
@@ -139,6 +140,7 @@ nav ul li a.actief {
     align-items: center;
     }
 
+/* Vloeiende scroll over de pagina */
 .scrolls {
     position: absolute;
     top: 50%;
@@ -168,7 +170,8 @@ nav ul li a.actief {
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory; 
 }
-
+/* Eind vloeiende scroll over de pagina */
+/* Rechter tekstdeel van de community-card */
 .community-info {
     padding: 15px;
     position: relative;
@@ -176,6 +179,7 @@ nav ul li a.actief {
     font-size: large;
 }
 
+/* Iedere aparte sectie */
 section{
     height: 100vh;
 }
@@ -183,7 +187,9 @@ section{
 section h3{
     margin-top: 65px;
 }
+/* Eind iedere aparte sectie */
 
+/* De kaarten */
 .community-card {
     display: flex;
     flex-direction: row;
@@ -196,7 +202,7 @@ section h3{
     box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Button in de kaart */
 .communitybutton {
     background-color: #EFB75B;
     border: 1px solid transparent;
@@ -214,6 +220,7 @@ section h3{
 
 /* GEAR STYLING */
 /* checkbox1 */
+/* Overall plaatsing en grootte van de checkbox */
 .checkbox-main{
     width: 50%;
     height: auto;
@@ -223,10 +230,12 @@ section h3{
     margin-top: 20px;
 }
 
+/* Uitzetten van de check (standaard) */
 .checkbox-main input[type=checkbox]{
     display: none;
 }
 
+/* Omvang en kleur checkbox */
 .check-box-item{
     width: 1em;
     height: 1em;
@@ -268,10 +277,12 @@ section h3{
     transform:rotate(-50deg);
 }
 
+/* Checked-kleur van checkbox */
 .checkbox-main input[type=checkbox]:checked + .check-box-item, .check-box-item.checked{
     border-color: #EFB75B;
 }
 
+/* Animatie */
 .checkbox-main input[type=checkbox]:checked + .check-box-item::after, .check-box-item.checked::after{
     height: 5px;
     -webkit-animation: checkboxleft 0.2s ease 0s forwards;
@@ -325,7 +336,7 @@ section h3{
         height: 240px;
     }
 }
-
+/* Eind animatie */
 
 /* COURSES STYLING */
 .title-bar {
