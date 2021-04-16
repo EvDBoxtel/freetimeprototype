@@ -331,6 +331,21 @@ nav ul li a.actief {
 .label>.checked {
     color: #EFB75B;
 }
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 0 5px;
+}
+
+
+.labelA>i {
+    color: rgba(0, 0, 0, 0.2)
+}
+
+.labelA>.checked {
+    color: #000000;
+}
 
 .beginner-course {
     margin-bottom: 10px;
@@ -338,6 +353,7 @@ nav ul li a.actief {
 
 /* HOME STYLING */
 
+/*
 .course { 
     --coursewidth: 100%;
     background: #fff;
@@ -466,7 +482,7 @@ nav ul li a.actief {
     }
 }
 
-
+*/
 
 /* PROFILE STYLING */
 
