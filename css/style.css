@@ -422,6 +422,21 @@ section h3{
 .label>.checked {
     color: #EFB75B;
 }
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 0 5px;
+}
+
+
+.labelA>i {
+    color: rgba(0, 0, 0, 0.2)
+}
+
+.labelA>.checked {
+    color: #000000;
+}
 
 .beginner-course {
     margin-bottom: 10px;
@@ -429,6 +444,7 @@ section h3{
 
 /* HOME STYLING */
 
+/*
 .course { 
     --coursewidth: 100%;
     background: #fff;
@@ -557,7 +573,7 @@ section h3{
     }
 }
 
-
+*/
 
 /* PROFILE STYLING */
 
