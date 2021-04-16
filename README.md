@@ -11,7 +11,7 @@ Clone deze repository of download het als .zip om het op je eigen computer te op
 6. Start met je eigen dingen.
 
 ## Check het huidige project op:
-[FreeTime](https://i333925.hera.fhict.nl/freetimeprototype/)
+[FreeTime](https://i333925.hera.fhict.nl/freetimeprototype/){:target="_blank"}
 
 ## Om de app te gebruiken volg het volgende stappenplan
 #### Android:
