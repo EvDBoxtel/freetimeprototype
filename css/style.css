@@ -21,7 +21,7 @@ body
 
 header {
     grid-area: head;
-    display: flex;
+    /* display: flex; */
     width: 100vw;
     max-width: 100vw;
     background-color:var(--overlaykleur);
@@ -36,6 +36,8 @@ header {
 }
 
 header img {
+    display: block;
+    margin: 0 auto;
     max-width: 20em;
 }
 
@@ -609,7 +611,7 @@ section h3{
     font-size: 100%;
     color: white;
     text-align: center;
-    margin-top: 2vh;
+    /* margin-top: 2vh; */
 }
 
 .landscape_profile img {
