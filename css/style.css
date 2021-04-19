@@ -596,6 +596,7 @@ section h3{
     grid-template-areas:"head" "content" "menu";
     grid-template-rows: 120px 1fr 80px;
     background-color: #fffffff1;
+    overflow: hidden;
 }
 
 /* Style voor het bovenstuk van de pagina */
