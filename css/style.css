@@ -73,6 +73,7 @@ main {
     grid-area: content;
     padding: 10px 5px 0 5px;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 /* Code gekopieerd van vorig project */
@@ -179,6 +180,10 @@ nav ul li a.actief {
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory; 
+}
+
+.smooth::-webkit-scrollbar {
+    display: none;
 }
 
 
