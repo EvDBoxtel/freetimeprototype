@@ -8,6 +8,16 @@
 
 }
 
+/* Verberg scrollbar voor Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Verberg scrollbar voor IE, Edge and Firefox */
+html {
+    overflow: hidden;
+}
+
 /* HUISSTIJL */
 body
 {
@@ -64,8 +74,6 @@ main {
     padding: 10px 5px 0 5px;
     overflow: scroll;
 }
-
-
 
 /* Code gekopieerd van vorig project */
 footer {
@@ -140,7 +148,7 @@ nav ul li a.actief {
     line-height: 1.5;
     color: var(--tekstkleur);
     align-items: center;
-    }
+}
 
 /* Vloeiende scroll over de pagina */
 .scrolls {
@@ -172,6 +180,8 @@ nav ul li a.actief {
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory; 
 }
+
+
 /* Eind vloeiende scroll over de pagina */
 /* Rechter tekstdeel van de community-card */
 .community-info {
@@ -221,14 +231,18 @@ section h3{
 
 
 /* GEAR STYLING */
+/* lijst om de checkboxes heen zodat de body styling niet aangetast wordt*/
+.checkbox-list { 
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
 /* checkbox1 */
 /* Overall plaatsing en grootte van de checkbox */
 .checkbox-main{
     width: 50%;
     height: auto;
-    margin: auto;
-    position: absolute;
-    text-align: baseline;
+    margin: 20px auto 0 20px;
     margin-top: 20px;
 }
 
