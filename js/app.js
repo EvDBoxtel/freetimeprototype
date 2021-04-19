@@ -1,6 +1,14 @@
 const tags = document.querySelectorAll('.tag'); /** elementen met class 'tag' */
 const search_icon = document.getElementById('search-icon'); /** element met id 'search-icon' */
 const search_bar = document.getElementById('search-bar'); /** element met id 'search-bar' */
+let body = document.querySelector('body');
+let main = document.querySelector('main');
+fetch('pages/home.html').then(function(response) {
+    return response.text()
+}).then(function(html) {
+    main.innerHTML = html;
+})
+
 
 setInterval("checkFocus()", 1); /** voert elke duizendste seconde de 'checkForcus' functie uit */
 
@@ -28,6 +36,7 @@ const menuBtns = document.querySelectorAll('.menuBtn'); /** vraag elementen op m
 
 menuBtns.forEach((menuBtn) => { /** looped door alle elementen van class 'menuBtn' heen */
     menuBtn.addEventListener('click', () => { /** voeg voor elke element een click functie toe */
+        menuBtn.firstChild.classList.toggle('actief');
         let page_id = menuBtn.getAttribute("data-page-id"); /** vraag het data attribuut op bij de aangeklikte 'menuBtn' */
         loadPage(page_id); /** roep de loadpage functie aan met de data van het data attribuut van de 'menuBtn' */
     })
@@ -39,9 +48,44 @@ const loadPage = (pageId) => {
         return response.text() /** geeft de data van de opgevraagde pagina weer als tekst */
     })
     .then(function(html) {
-        document.querySelector('main').innerHTML = html; /** zet de opgevraagde data in een html element */
+        if(pageId == 'pages/profile.html') { //checkt of het de profile pagina is
+            body.setAttribute('id', 'fullpage'); //Geeft de body een id
+            body.innerHTML = html;
+        } else {
+            body.setAttribute('id', ''); // haalt de id van de body weg
+            main.innerHTML = html; /** zet de opgevraagde data in een html element */
+        }
     })
     .catch(function(err) {  
         console.log('Failed to fetch page: ', err);  /** geeft een error melding als het opvragen van de data niet goed verloopt */
     });
 };
+
+// let deferredPrompt;
+// const addBtn = document.querySelector('.add-button');
+// addBtn.style.display = 'none';
+
+// window.addEventListener('beforeinstallprompt', (e) => {
+//     // Prevent Chrome 67 and earlier from automatically showing the prompt
+//     e.preventDefault();
+//     // Stash the event so it can be triggered later.
+//     deferredPrompt = e;
+//     // Update UI to notify the user they can add to home screen
+//     addBtn.style.display = 'block';
+  
+//     addBtn.addEventListener('click', (e) => {
+//       // hide our user interface that shows our A2HS button
+//       addBtn.style.display = 'none';
+//       // Show the prompt
+//       deferredPrompt.prompt();
+//       // Wait for the user to respond to the prompt
+//       deferredPrompt.userChoice.then((choiceResult) => {
+//           if (choiceResult.outcome === 'accepted') {
+//             console.log('User accepted the A2HS prompt');
+//           } else {
+//             console.log('User dismissed the A2HS prompt');
+//           }
+//           deferredPrompt = null;
+//         });
+//     });
+//   });

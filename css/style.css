@@ -390,7 +390,7 @@ section h3{
 }
 
 #search-bar:focus {
-    width: 80vw;
+    width: 85vw;
     color: #EFB75B;
     background-color: #ffffff;
     box-shadow: 0px 5px 25px -5px rgba(0, 0, 0, 0.3);
@@ -726,4 +726,5 @@ section h3{
     position: absolute;
     top: 1px;
     left: 1px;
+    z-index: 101;
 }
