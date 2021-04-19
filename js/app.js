@@ -29,10 +29,12 @@ const coursesBtn = document.getElementById('courses');
 
 homeBtn.addEventListener('click', () => {
     alert('home');
+    alert(home);
     console.log(home);
 });
 coursesBtn.addEventListener('click', () => {
     alert('courses');
+    alert(courses);
     console.log(courses);
 });
 
