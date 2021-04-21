@@ -26,10 +26,10 @@ function checkFocus() { /** start checkFocus functie */
 }
 
 //backpackingcourse scroll progress
-main.onscroll = function() {myFunction()};
+main.onscroll = function() {readProgression()};
 
-function myFunction() {
-  var winScroll = main.scrollTop || document.documentElement.scrollTop;
+function readProgression() {
+  var winScroll = main.scrollTop;
   var height = main.scrollHeight - main.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
