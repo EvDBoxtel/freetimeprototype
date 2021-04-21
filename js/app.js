@@ -108,4 +108,8 @@ window.addEventListener('beforeinstallprompt', (e) => {
           deferredPrompt = null;
         });
     });
-  });
+});
+
+if (window.matchMedia('(display-mode: standalone)').matches) {  
+    addBtn.style.display = 'none';
+}  
