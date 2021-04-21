@@ -60,3 +60,13 @@ const loadPage = (pageId) => {
         console.log('Failed to fetch page: ', err);  /** geeft een error melding als het opvragen van de data niet goed verloopt */
     });
 };
+
+//backpackingcourse scroll progress
+main.onscroll = function() {readProgression()};
+
+function readProgression() {
+  var winScroll = main.scrollTop;
+  var height = main.scrollHeight - main.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
