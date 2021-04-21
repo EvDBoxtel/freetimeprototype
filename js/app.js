@@ -31,3 +31,32 @@ function checkFocus() { /** start checkFocus functie */
         }
     }
 }
+
+const menuBtns = document.querySelectorAll('.menuBtn'); /** vraag elementen op met class 'menuBtn' */
+
+menuBtns.forEach((menuBtn) => { /** looped door alle elementen van class 'menuBtn' heen */
+    menuBtn.addEventListener('click', () => { /** voeg voor elke element een click functie toe */
+        menuBtn.firstChild.classList.toggle('actief');
+        let page_id = menuBtn.getAttribute("data-page-id"); /** vraag het data attribuut op bij de aangeklikte 'menuBtn' */
+        loadPage(page_id); /** roep de loadpage functie aan met de data van het data attribuut van de 'menuBtn' */
+    })
+})
+
+const loadPage = (pageId) => { 
+    fetch(pageId) /** start een asynchrone functie om data van de aangevraagde pagina ('pageId') op te halen  */
+    .then(function(response) {
+        return response.text() /** geeft de data van de opgevraagde pagina weer als tekst */
+    })
+    .then(function(html) {
+        if(pageId == 'pages/profile.html') { //checkt of het de profile pagina is
+            body.setAttribute('id', 'fullpage'); //Geeft de body een id
+            body.innerHTML = html;
+        } else {
+            body.setAttribute('id', ''); // haalt de id van de body weg
+            main.innerHTML = html; /** zet de opgevraagde data in een html element */
+        }
+    })
+    .catch(function(err) {  
+        console.log('Failed to fetch page: ', err);  /** geeft een error melding als het opvragen van de data niet goed verloopt */
+    });
+};
