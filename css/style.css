@@ -16,14 +16,14 @@ html::-webkit-scrollbar {
 /* START */
 /* Verberg scrollbar voor IE, Edge and Firefox */
 html {
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 /* HUISSTIJL */
 body
 {
     background-color: #fff;
-    /* display: grid; */
+    display: grid;
     grid-template-areas:"head" "content" "menu";
     grid-template-rows: 50px 1fr 80px;
     height: 100vh;
@@ -725,6 +725,13 @@ section h3{
 }
 
 /* BACKPACKING COURSE STYLING */
+#backpackingcourse-body
+{
+    background-color: #fff;
+    height: 100vh;
+    font-family: var(--tekst-family);
+}
+
 #backpackingcourseheader{
  grid-area: head;
     /* display: flex; */
@@ -794,87 +801,3 @@ section h3{
     -moz-box-shadow: -1px 3px 25px 12px rgba(0,0,0,0.1);
     box-shadow: -1px 3px 25px 12px rgba(0,0,0,0.1);
 }
-
-/* popover
-  .wrapper {
-    width: 100%;
-    padding: 250px;
-  } 
-
-  #tooltip {
-    background: #333;
-    color: white;
-    font-weight: bold;
-    padding: 4px 8px;
-    font-size: 13px;
-    border-radius: 4px;
-    display: none;
-   }
-
-  #tooltip[data-show] {
-    display: block;
-  }
-
-  /* Pijltje popover */
-  /* #arrow,
-  #arrow::before {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: inherit;
-  }
-
-  #arrow {
-    visibility: hidden;
-  }
-
-  #arrow::before {
-    visibility: visible;
-    content: '';
-    transform: rotate(45deg);
-  }
-
-  #tooltip[data-popper-placement^='top'] > #arrow {
-    bottom: -4px;
-  }
-
-  #tooltip[data-popper-placement^='bottom'] > #arrow {
-    top: -4px;
-  }
-
-  #tooltip[data-popper-placement^='left'] > #arrow {
-    right: -4px;
-  }
-
-  #tooltip[data-popper-placement^='right'] > #arrow {
-    left: -4px;
-  } */ */
-
-  /* scroll progress */
-  .progress-header {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    background-color: #f1f1f1;
-  }
-  
-  .progress-container {
-    width: 100%;
-    height: 8px;
-    background: #ccc;
-  }
-  
-  .progress-bar {
-    height: 8px;
-    background: #EFB75B;
-    width: 0%;
-    z-index: 3;
-  }
-  
-  .progress-content {
-    padding: 10px 0;
-    margin-top: 50px;
-  }
-
-  /* scroll progress end */
