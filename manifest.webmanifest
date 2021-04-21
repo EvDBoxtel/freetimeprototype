@@ -3,7 +3,7 @@
     "background_color": "#808080",
     "display": "standalone",
     "scope": ".",
-    "start_url": "./",
+    "start_url": "/",
     "orientation":"portrait",
     "name": "FreeTime",
     "short_name": "FreeTime",

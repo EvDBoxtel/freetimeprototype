@@ -730,6 +730,11 @@ section h3{
     top: 1px;
     left: 1px;
     z-index: 101;
+    color: #FFFFFF;
+    background-color: #EFB75B;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 10px;
 }
 /* BACKPACKING COURSE STYLING */
 .backBtn {
