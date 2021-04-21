@@ -63,12 +63,14 @@ const loadPage = (pageId) => {
     });
 };
 
-//backpackingcourse scroll progress
-main.onscroll = function() {readProgression()};
+if (document.titel == 'Backpacking course') {
+    //backpackingcourse scroll progress
+    main.onscroll = function() {readProgression()};
 
-function readProgression() {
-  var winScroll = main.scrollTop;
-  var height = main.scrollHeight - main.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
+    function readProgression() {
+    var winScroll = main.scrollTop;
+    var height = main.scrollHeight - main.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+}
 }
