@@ -3,11 +3,13 @@ const search_icon = document.getElementById('search-icon'); /** element met id '
 const search_bar = document.getElementById('search-bar'); /** element met id 'search-bar' */
 let body = document.querySelector('body');
 let main = document.querySelector('main');
-fetch('pages/home.html').then(function(response) {
-    return response.text()
-}).then(function(html) {
-    main.innerHTML = html;
-})
+if (document.title == 'Prototype FreeTime') {
+    fetch('pages/home.html').then(function(response) {
+        return response.text()
+    }).then(function(html) {
+        main.innerHTML = html;
+    })
+}
 
 
 setInterval("checkFocus()", 1); /** voert elke duizendste seconde de 'checkForcus' functie uit */
