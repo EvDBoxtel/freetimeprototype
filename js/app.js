@@ -105,7 +105,7 @@ const loadPage = (pageId) => {
 };
 
 //backpackingcourse scroll progress
-if (document.titel== 'Backpacking course') {
+if (document.title == 'Backpacking course') {
     main.onscroll = function() {readProgression()};
 
     function readProgression() {
