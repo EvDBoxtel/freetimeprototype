@@ -1,9 +1,13 @@
 const tags = document.querySelectorAll('.tag'); /** elementen met class 'tag' */
 const search_icon = document.getElementById('search-icon'); /** element met id 'search-icon' */
 const search_bar = document.getElementById('search-bar'); /** element met id 'search-bar' */
+const generalHeader = document.getElementById('generalHeader');
+const profileHeader = document.getElementById('profileHeader');
 let body = document.querySelector('body');
 let main = document.querySelector('main');
+let profile = document.getElementById('profile');
 if (document.title == 'Prototype FreeTime') {
+    profileHeader.style.display = 'none';
     fetch('pages/home.html').then(function(response) {
         return response.text()
     }).then(function(html) {
@@ -79,7 +83,11 @@ const menuBtns = document.querySelectorAll('.menuBtn'); /** vraag elementen op m
 
 menuBtns.forEach((menuBtn) => { /** looped door alle elementen van class 'menuBtn' heen */
     menuBtn.addEventListener('click', () => { /** voeg voor elke element een click functie toe */
-        menuBtn.firstChild.classList.toggle('actief');
+        menuBtns.forEach((menuBtn) => {
+            menuBtn.firstChild.classList.remove('actief');
+        });
+        menuBtn.firstChild.setAttribute('class', 'actief');
+
         let page_id = menuBtn.getAttribute("data-page-id"); /** vraag het data attribuut op bij de aangeklikte 'menuBtn' */
         loadPage(page_id); /** roep de loadpage functie aan met de data van het data attribuut van de 'menuBtn' */
     })
@@ -93,9 +101,13 @@ const loadPage = (pageId) => {
     .then(function(html) {
         if(pageId == 'pages/profile.html') { //checkt of het de profile pagina is
             body.setAttribute('id', 'fullpage'); //Geeft de body een id
-            body.innerHTML = html;
+            generalHeader.style.display = 'none';
+            profileHeader.style.display = 'block';
+            main.innerHTML = html;
         } else {
             body.setAttribute('id', ''); // haalt de id van de body weg
+            generalHeader.style.display = 'block';
+            profileHeader.style.display = 'none';
             main.innerHTML = html; /** zet de opgevraagde data in een html element */
         }
     })
