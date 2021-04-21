@@ -1,7 +1,7 @@
 const tags = document.querySelectorAll('.tag'); /** elementen met class 'tag' */
 const search_icon = document.getElementById('search-icon'); /** element met id 'search-icon' */
 const search_bar = document.getElementById('search-bar'); /** element met id 'search-bar' */
-let backPackingCourseMain = document.getElementById('#backpackingcoursemain');
+let main = document.querySelector('main');
 
 setInterval("checkFocus()", 1); /** voert elke duizendste seconde de 'checkForcus' functie uit */
 
@@ -26,11 +26,11 @@ function checkFocus() { /** start checkFocus functie */
 }
 
 //backpackingcourse scroll progress
-window.onscroll = function() {myFunction()};
+main.onscroll = function() {myFunction()};
 
 function myFunction() {
-  var winScroll = document.backPackingCourseMain.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var winScroll = main.scrollTop || document.documentElement.scrollTop;
+  var height = main.scrollHeight - main.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
