@@ -8,7 +8,7 @@ let main = document.querySelector('main');
 let profile = document.getElementById('profile');
 if (document.title == 'Prototype FreeTime') {
     profileHeader.style.display = 'none';
-    fetch('pages/home.html').then(function(response) {
+    fetch('pages/courses.html').then(function(response) {
         return response.text()
     }).then(function(html) {
         main.innerHTML = html;
