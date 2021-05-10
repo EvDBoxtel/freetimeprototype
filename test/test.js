@@ -1,8 +1,13 @@
-window.onscroll = function() {myFunction()};
+var rangeSlider = document.getElementById('slider-range');
 
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
+noUiSlider.create(rangeSlider, {
+    start: [5],
+    range: {
+        'min': [1],
+        'max': [10]
+    }
+});
+var rangeSliderValueElement = document.getElementById('slider-range-value');
+rangeSlider.noUiSlider.on('update', function (values, handle) {
+    rangeSliderValueElement.innerHTML = values[handle];
+});
