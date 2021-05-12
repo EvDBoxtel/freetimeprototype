@@ -411,17 +411,49 @@ section h3{
     display: none;
 }
 
-.course-card {
+.course-card { /** Hobby card*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    /* align-items: center; */
     margin-bottom: 10px;
     border-radius: 15px;
     box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.card-padding { /** Hobby card padding and layout*/
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bookmark { /** Book mark in top right corner of hobby card*/
+    position: relative;
+    left: 80%;
+    top: 0;
+    height: 25px; 
+    width: 0;
+    -webkit-transform: rotate(0deg)   skew(0deg);
+    transform: rotate(0deg) skew(0deg);
+    border-left: 15px solid #808080;
+    border-right: 15px solid #808080;
+    border-bottom: 20px solid transparent;
+}
+
+.card-title-bar { /***/ 
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+
+}
+
+.card-title {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bolder;
 }
 
 .image {
@@ -430,7 +462,10 @@ section h3{
     height: 50px;
     background-color: #EFB75B;
     border-radius: 50%;
-    margin: 10px 5px 10px 0;
+}
+
+.card-content {
+    margin-left: -30px;
 }
 
 .image>i {
@@ -478,7 +513,6 @@ section h3{
 
 .beginner-course {
     margin-bottom: 10px;
-    height: 35vh;
 }
 
 #coursePage h2 {
