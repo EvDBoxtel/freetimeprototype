@@ -8,11 +8,18 @@ let main = document.querySelector('main');
 let profile = document.getElementById('profile');
 if (document.title == 'Prototype FreeTime') {
     profileHeader.style.display = 'none';
-    fetch('pages/courses.html').then(function(response) {
-        return response.text()
-    }).then(function(html) {
-        main.innerHTML = html;
-    });
+    if (isSerurveyDone == true) {
+        fetch('pages/courses.html').then(function(response) {
+            return response.text()
+        }).then(function(html) {
+            main.innerHTML = html;
+        });
+    } else {
+        fetch('survey/question1.html').then(function(response) {
+            return response.text();
+        })
+    }
+    
 
     let deferredPrompt;
     const addBtn = document.querySelector('.add-button');
@@ -55,6 +62,7 @@ if ('serviceWorker' in navigator) {
     .catch(function(error) {
       console.log('Service worker registration failed, error:', error);
     });
+    isSerurveyDone = false;
 }
 
 setInterval("checkFocus()", 1); /** voert elke duizendste seconde de 'checkForcus' functie uit */
@@ -127,3 +135,14 @@ if (document.title == 'Backpacking course') {
     document.getElementById("myBar").style.width = scrolled + "%";
     }    
 }
+
+if (document.title == "survey") {
+    function setSurveyDone() {
+        navigator.storage.requestPersistent().then((granted) => {
+            if (granted) {
+                isSerurveyDone = true;
+            }
+        })
+    }
+}
+

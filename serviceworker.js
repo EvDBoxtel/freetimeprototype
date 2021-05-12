@@ -1,5 +1,6 @@
 self.addEventListener("install",(installing)=>{
     console.log("Service Worker: I am being installed, hello world!");
+    
 });
 
 self.addEventListener("activate",(activating)=>{
@@ -8,6 +9,7 @@ self.addEventListener("activate",(activating)=>{
 
 self.addEventListener("fetch",(fetching)=>{
     console.log("Service Worker: User threw a ball, I need to fetch it!");
+
 });
 
 self.addEventListener("push",(pushing)=>{
