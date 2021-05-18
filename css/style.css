@@ -22,7 +22,7 @@ html {
 /* HUISSTIJL */
 body
 {
-    background-color: #fff;
+    background-color: #fafafa;
     display: grid;
     grid-template-areas:"head" "content" "menu";
     grid-template-rows: 50px 1fr 80px;
@@ -41,7 +41,7 @@ header {
     position: fixed;
     top: 0px;
     left: 0;
-    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2); */
     /* z-index: 100; */
     /* END add box shadow outside bottom border */
 }
@@ -53,11 +53,14 @@ header img {
 }
 
 /* STOP */
-
+.menu_header {
+    width: 200%;
+}
 .logo{
     width: 80%;
     margin: auto;
 }
+
 
 ul {
     list-style: none;
@@ -145,9 +148,9 @@ nav ul li a.actief {
 /* COMMUNITY STYLING */
 /* main-deel van de pagina */
 #communitybody {
-    background-color: var(--overlaykleur);
+    background-color: #fafafa;
     display: flex;
-    height: 400vh;
+    height: 80vh;
     flex-direction: column;
     line-height: 1.5;
     color: var(--tekstkleur);
@@ -216,17 +219,21 @@ section h3{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    margin: 25px;
+    margin: 10px;
     margin-bottom: 10px;
     border-radius: 15px;
-    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.05);
+    background-color: #fff;
 }
 
 /* Button in de kaart */
 .communitybutton {
+    display: block;
+    margin: 5vh auto 0 auto;
+    width: 80%;
     background-color: #EFB75B;
     border: 1px solid transparent;
-    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.02);
     color: #fff;
     font-size: 16px;
     padding: 10px 20px;
@@ -235,6 +242,55 @@ section h3{
     transition: all .4s ease-in-out;
     font-weight: bold;
     border-radius: 25px;
+}
+
+.communitybutton button {
+    display: block;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0);
+    color: #FFF;
+    font-size: 20px;
+}
+
+/* Community styling */
+#communityhome h1 {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+#communityhome h2 {
+    margin-bottom: 30px;
+    margin-left: 10px;
+    font-size: 21px;
+    color: #606060;
+}
+
+.above_footer p {
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* Hobby page styling */
+.intro_hobbypage h1 {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.intro_hobbypage h2 {
+    margin-bottom: 30px;
+    margin-left: 10px;
+    font-size: 21px;
+    color: #606060;
+}
+
+.title_card p{
+    font-size: 14px;
+    font-weight: bolder;
 }
 
 
@@ -368,6 +424,7 @@ section h3{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 #search-bar {
@@ -418,9 +475,14 @@ section h3{
     /* align-items: center; */
     margin-bottom: 10px;
     border-radius: 15px;
-    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.05);
     margin-left: 10px;
     margin-right: 10px;
+    background-color: #fff;
+}
+
+.course-card p{
+    padding: 10px;
 }
 
 .card-padding { /** Hobby card padding and layout*/
@@ -456,11 +518,15 @@ section h3{
     font-weight: bolder;
 }
 
+.card-title p {
+    margin-top: 3px;
+}
+
 .image {
     min-width: 50px;
     width: 50px;
     height: 50px;
-    background-color: #EFB75B;
+    /* background-color: #808080; */
     border-radius: 50%;
 }
 
@@ -477,8 +543,33 @@ section h3{
     text-align: center;
     display: inline-block;
     width: 100%;
-    top: 8px;
+    top: 5px;
+    text-shadow: 0 0 5px #000;
+
 }
+
+/* Styling voor de kaartjes van de hobby page */
+.image2 {
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.image2>i {
+    color: #ffffff;
+    font-size: 1.5em;
+    position: relative;
+    /* left: 12px;
+    top: 8px; */
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    top: 40px;
+    text-shadow: 0 0 5px #000;
+
+}
+
+/* Stop */
 
 .column {
     display: flex;
@@ -503,7 +594,9 @@ section h3{
 
 
 .labelA>i {
-    color: rgba(0, 0, 0, 0.2)
+    color: rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    font-size: 20px;
 }
 
 .labelA>.checked {
@@ -515,12 +608,21 @@ section h3{
     margin-bottom: 10px;
 }
 
-#coursePage h2 {
-    margin-bottom: 15px;
+#coursePage h1 {
     margin-left: 10px;
     margin-top: 20px;
+    font-size: 30px;
+}
+
+#coursePage h2 {
+    margin-bottom: 30px;
+    margin-left: 10px;
     font-size: 21px;
     color: #606060;
+}
+
+.trending-courses h2{
+    margin-top: 25px;
 }
 
 .score p {
@@ -784,6 +886,14 @@ section h3{
     margin: 10px;
     border-radius: 15px;
     padding: 10px;
+}
+
+.menu-button {
+    position: absolute;
+    top: 22px;
+    left: 90vw;
+    z-index: 101;
+    color: #000;
 }
 /* BACKPACKING COURSE STYLING */
 .backBtn {
