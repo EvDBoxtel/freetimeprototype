@@ -890,10 +890,12 @@ section h3{
 
 .menu-button {
     position: absolute;
-    top: 22px;
+    top: 10px;
     left: 90vw;
     z-index: 101;
     color: #000;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
 }
 /* BACKPACKING COURSE STYLING */
 .backBtn {
