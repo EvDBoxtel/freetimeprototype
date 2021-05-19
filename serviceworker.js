@@ -1,15 +1,54 @@
-self.addEventListener("install",(installing)=>{
-    console.log("Service Worker: I am being installed, hello world!");
+const cacheName = 'FreeTime';
+const cacheAssets = [
+    'js/app.js',
+    'index.html',
+    'pages/courses.html',
+    'pages/community.html',
+    'pages/hobby_scrollpage.html',
+    'pages/gear.html',
+    'pages/profile.html',
+];
+
+self.addEventListener("install", e => {
+    console.log("Service Worker: Installed");
+    e.waitUntil(
+        caches.open(cacheName).then(cache => {
+            console.log('ServiceWorker: Caching files');
+            cache.addAll(cacheAssets);
+        })
+        .then(() => self.skipWaiting())
+    );
 });
 
-self.addEventListener("activate",(activating)=>{
-    console.log("Service Worker: All systems online, ready to go!");
+self.addEventListener("activate", e => {
+    console.log("Service Worker: Activated");
+    e.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(cache => {
+                    if(cache !== cacheName) {
+                        console.log('Serviceworker: Clearing Old Cache');
+                        return caches.delete(cache);
+                    }
+                })
+            );
+        })
+    );
 });
 
-self.addEventListener("fetch",(fetching)=>{
-    console.log("Service Worker: User threw a ball, I need to fetch it!");
+self.addEventListener("fetch", e => {
+    console.log("Service Worker: Fetching");
+    // e.respondWidth(
+    //     fetch(e.request).then(res => {
+    //         const resClone = res.clone();
+    //         caches.open(cacheName).then(cache => {
+    //             cache.put(e.request, resClone);
+    //         });
+    //         return res;
+    //     }).catch(err => caches.match(e.request).then(res => res))
+    // );
 });
 
-self.addEventListener("push",(pushing)=>{
-  	console.log("Service Worker: I received some push data, but because I am still very simple I don't know what to do with it :(");
+self.addEventListener("push", e => {
+  	console.log("Service Worker: Pushing...");
 })

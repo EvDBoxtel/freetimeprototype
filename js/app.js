@@ -8,11 +8,23 @@ let main = document.querySelector('main');
 let profile = document.getElementById('profile');
 if (document.title == 'Prototype FreeTime') {
     profileHeader.style.display = 'none';
-    fetch('pages/courses.html').then(function(response) {
-        return response.text()
-    }).then(function(html) {
-        main.innerHTML = html;
-    });
+    console.log(localStorage.getItem('isSurveyDone'));
+    if (localStorage.getItem('isSurveyDone') == 'true') {
+        console.log('isTrue');
+        fetch('pages/courses.html').then(function(response) {
+            return response.text()
+        }).then(function(html) {
+            main.innerHTML = html;
+        });
+    } else {
+        console.log('isFalse');
+        fetch('survey/question1.html').then(function(response) {
+            return response.text()
+        }).then(function(html) {
+            document.write(html);
+        })
+    }
+    
 
     let deferredPrompt;
     const addBtn = document.querySelector('.add-button');
@@ -48,13 +60,12 @@ if (document.title == 'Prototype FreeTime') {
 }
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('serviceworker.js')
-    .then(function(registration) {
-      console.log('Registration successful, scope is:', registration.scope);
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+        .register('serviceworker.js')
+        .then(reg => console.log('Serviceworker is: Registered'))
+        .catch(err => console.log(`Serviceworker is: Error: ${err}`));
     })
-    .catch(function(error) {
-      console.log('Service worker registration failed, error:', error);
-    });
 }
 
 setInterval("checkFocus()", 1); /** voert elke duizendste seconde de 'checkForcus' functie uit */
@@ -127,3 +138,8 @@ if (document.title == 'Backpacking course') {
     document.getElementById("myBar").style.width = scrolled + "%";
     }    
 }
+
+function setSurveyDone() {
+    localStorage.setItem('isSurveyDone', true);
+}
+
