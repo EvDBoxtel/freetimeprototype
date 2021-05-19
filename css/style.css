@@ -1080,3 +1080,119 @@ body {
   }
 }
  */
+
+ /* Survey css */
+ .range-box{
+	background: rgba(255,255,255,0.8);
+	/* width: 500px; */
+	padding: 40px;
+	height: 20vw;
+	/* position: absolute; */
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.range-box2{
+	background: rgba(255,255,255,0.8);
+	width: 500px;
+	padding: 40px;
+	height: 220px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.range-box span{
+	font-size: 20px;
+	margin-right: 90px;
+    color: #000;
+}
+
+.range-box h2 {
+    margin-bottom: 5vh;
+}
+
+.noUi-target .noUi-base {
+	background: linear-gradient(117deg, #EFB75B 0,#ffb01d 100%);
+	border: none;
+	border-radius: 15px; 
+	cursor: pointer;
+}
+.noUi-target .noUi-base .noUi-connect {
+	background: #EFB75B;
+}
+.noUi-target .noUi-base .noUi-tooltip {
+	bottom: -35px;
+	color: #EFB75B;
+	border: none;
+	outline: none;
+	font-weight: bold; 
+}
+.noUi-handle.noUi-handle-lower {
+	background: #EFB75B;
+	border-radius: 20px;
+	width: 30px;
+	height: 30px;
+	outline: none;
+	right: 0px;
+	top: -8px;
+	cursor: pointer; 
+	box-shadow: none;
+	border: 3px solid #ffffff;
+	-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+}
+.noUi-handle.noUi-handle-lower.noUi-active{
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.noUi-handle.noUi-handle-lower::before, .noUi-handle.noUi-handle-lower::after {
+	display: none; 
+}
+.noUi-handle.noUi-handle-lower .noUi-touch-area {
+	width: 30px;
+	height: 30px; 
+}
+
+.extra-text span{
+	margin-left: 23vw;
+}
+
+.extra-textq1 span{
+    margin-left: 20vw;;
+}
+
+.extra-textq2 span{
+    margin-left: 12.54vw;
+}
+
+.extra-textq3, .extra-textq4 span{
+    margin-left: 18vw;
+}
+
+
+.range-box a{
+    text-decoration: none;
+}
+
+.survey_main {
+    display: block;
+    margin: auto;
+}
